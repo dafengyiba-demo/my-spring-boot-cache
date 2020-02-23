@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_boot_cache
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver #驱动可以不配置，会默认根据连接进行加载
+
+  redis:
+    host: 127.0.0.1
+    password: 123456 #redis配置
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true  #mybatis开启驼峰命名法规则
+
+
+
+logging:
+  level:
+    my:
+      company:
+        cache:
+          myspringbootcache:
+            mapper: debug  #mapper包下，日志级别开启为debug
+
+
+
+debug: true #springboot自动配置报告
+
